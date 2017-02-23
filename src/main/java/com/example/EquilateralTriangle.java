@@ -1,17 +1,18 @@
 package com.example;
 
-public class EquilateralTriangle {
+public class EquilateralTriangle implements IShape2 {
     private double side;
 
     public EquilateralTriangle(double side) {
         this.side = side;
     }
 
-    public double getSide() {
-        return side;
+
+    public double computeArea() {
+        return (Math.sqrt(3)/4)*(side * side);
     }
 
-    public void setSide(double side) {
-        this.side = side;
+    public double computePerimeter() {
+        return side * 3;
     }
 }
